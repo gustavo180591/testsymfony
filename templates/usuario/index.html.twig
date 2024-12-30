@@ -1,14 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Usuario index{% endblock %}
+{% block title %}Usuario{% endblock %}
 
 {% block body %}
-    <h1>Usuario index</h1>
+    <h1>Usuario</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -16,6 +19,9 @@
         {% for usuario in usuarios %}
             <tr>
                 <td>{{ usuario.id }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.edad }}</td>
                 <td>
                     <a href="{{ path('app_usuario_show', {'id': usuario.id}) }}">show</a>
                     <a href="{{ path('app_usuario_edit', {'id': usuario.id}) }}">edit</a>
@@ -23,7 +29,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="2">no records found</td>
+                <td colspan="5">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
