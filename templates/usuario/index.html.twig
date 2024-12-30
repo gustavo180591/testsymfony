@@ -12,7 +12,7 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Edad</th>
-                <th>actions</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody>
@@ -23,8 +23,8 @@
                 <td>{{ usuario.apellido }}</td>
                 <td>{{ usuario.edad }}</td>
                 <td>
-                    <a href="{{ path('app_usuario_show', {'id': usuario.id}) }}">show</a>
-                    <a href="{{ path('app_usuario_edit', {'id': usuario.id}) }}">edit</a>
+                    <a href="{{ path('app_usuario_show', {'id': usuario.id}) }}">Ver</a>
+                    <a href="{{ path('app_usuario_edit', {'id': usuario.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
